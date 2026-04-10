@@ -1,0 +1,21 @@
+{
+	"name": "zt-pet13",
+	"version": "1.0.0",
+	"description": "uni-app project",
+	"main": "main.js",
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-build --watch",
+		"build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
+		"build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@vue/cli-service": "^4.5.21",
+		"cross-env": "^7.0.3",
+		"vue": "^2.6.14",
+		"vue-template-compiler": "^2.6.14"
+	}
+}

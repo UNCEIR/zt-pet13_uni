@@ -1,0 +1,172 @@
+.page {
+    min-height: 100vh;
+    background: #f7f7f7;
+    padding: 0 0 60rpx;
+}
+
+.section-title {
+    display: block;
+    margin: 32rpx 0 20rpx 36rpx;
+    font-size: 25rpx;
+    color: #888;
+    letter-spacing: 1rpx;
+}
+
+/* ========== 二维码区域 ========== */
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    margin: 0 32rpx;
+    border-radius: 20rpx;
+    padding: 40rpx 0 36rpx;
+    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+
+.qr-code {
+    position: relative;
+    width: 320rpx;
+    height: 320rpx;
+    background: #fff;
+}
+
+.qr-marker {
+    position: absolute;
+    width: 56rpx;
+    height: 56rpx;
+    border: 8rpx solid #222;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.qr-core {
+    width: 24rpx;
+    height: 24rpx;
+    background: #222;
+}
+
+.qr-tl {
+    top: 12rpx;
+    left: 12rpx;
+}
+.qr-tr {
+    top: 12rpx;
+    right: 12rpx;
+}
+.qr-bl {
+    bottom: 12rpx;
+    left: 12rpx;
+}
+
+.qr-data {
+    position: absolute;
+    top: 12rpx;
+    left: 12rpx;
+    right: 12rpx;
+    bottom: 12rpx;
+    z-index: 1;
+    background-color: #fff;
+    background-image: linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%), linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%);
+    background-size: 16rpx 16rpx;
+    background-position: 0 0, 8rpx 8rpx;
+}
+
+.qr-desc {
+    margin-top: 24rpx;
+    font-size: 27rpx;
+    color: #444;
+}
+
+/* ========== 微信分享区域 ========== */
+.wechat-title {
+    margin-top: 48rpx;
+}
+
+.wechat-card {
+    margin: 0 32rpx;
+    background: #ffffff;
+    border-radius: 20rpx;
+    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    padding: 28rpx 30rpx;
+    border: none;
+    text-align: left;
+    line-height: normal;
+}
+
+.wechat-card::after {
+    border: none;
+}
+
+/* WeChat 图标：绿色圆底 + 双气泡 logo */
+.wechat-icon {
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 50%;
+    background: #07c160;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.wx-bubble-l {
+    position: absolute;
+    width: 24rpx;
+    height: 20rpx;
+    background: #fff;
+    border-radius: 50%;
+    left: 12rpx;
+    top: 16rpx;
+}
+
+.wx-bubble-l::after {
+    content: '';
+    position: absolute;
+    bottom: -4rpx;
+    left: 2rpx;
+    width: 0;
+    height: 0;
+    border-left: 6rpx solid #fff;
+    border-bottom: 5rpx solid transparent;
+}
+
+.wx-bubble-r {
+    position: absolute;
+    width: 20rpx;
+    height: 16rpx;
+    background: #fff;
+    border-radius: 50%;
+    right: 12rpx;
+    bottom: 18rpx;
+}
+
+.wx-bubble-r::after {
+    content: '';
+    position: absolute;
+    bottom: -4rpx;
+    right: 2rpx;
+    width: 0;
+    height: 0;
+    border-right: 5rpx solid #fff;
+    border-bottom: 5rpx solid transparent;
+}
+
+.wechat-text {
+    margin-left: 20rpx;
+    flex: 1;
+    font-size: 32rpx;
+    color: #333;
+    font-weight: 500;
+}
+
+.arrow {
+    width: 18rpx;
+    height: 18rpx;
+    border-top: 3rpx solid #ccc;
+    border-right: 3rpx solid #ccc;
+    transform: rotate(45deg);
+}

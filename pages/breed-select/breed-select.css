@@ -1,0 +1,16 @@
+.page {
+    min-height: 100vh;
+    background: #f5f5f5;
+    padding: 24rpx 32rpx;
+}
+
+.item {
+    padding: 32rpx 0;
+    font-size: 30rpx;
+    color: #333;
+    border-bottom: 1rpx solid #eee;
+}
+
+.item:last-child {
+    border-bottom: none;
+}

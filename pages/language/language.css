@@ -1,0 +1,340 @@
+/* ========================================
+   语言切换页面 - language
+   温馨可爱风格 + 宠物插画
+   ======================================== */
+
+.page {
+    min-height: 100vh;
+    background: #f5f5f5;
+    padding: 40rpx 40rpx;
+    padding-bottom: calc(40rpx + env(safe-area-inset-bottom));
+}
+
+/* ---- 顶部宠物插画区域 ---- */
+.lang-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40rpx 0 60rpx;
+}
+
+/* 宠物插画 - 可爱的小狗 */
+.pet-illustration {
+    position: relative;
+    width: 200rpx;
+    height: 200rpx;
+    margin-bottom: 24rpx;
+    animation: pet-bounce 2s ease-in-out infinite;
+}
+
+@keyframes pet-bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10rpx);
+    }
+}
+
+/* 宠物头部 */
+.pet-head {
+    position: absolute;
+    top: 20rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140rpx;
+    height: 120rpx;
+    background: linear-gradient(135deg, #a8e063 0%, #89e04e 50%, #56ab2f 100%);
+    border-radius: 70rpx 70rpx 60rpx 60rpx;
+    box-shadow: 0 8rpx 24rpx rgba(137, 224, 78, 0.3);
+}
+
+/* 宠物耳朵 */
+.pet-ear {
+    position: absolute;
+    top: -20rpx;
+    width: 40rpx;
+    height: 60rpx;
+    background: linear-gradient(135deg, #89e04e 0%, #56ab2f 100%);
+    border-radius: 20rpx 20rpx 0 0;
+}
+
+.pet-ear--left {
+    left: 10rpx;
+    transform: rotate(-20deg);
+}
+
+.pet-ear--right {
+    right: 10rpx;
+    transform: rotate(20deg);
+}
+
+/* 宠物脸部 */
+.pet-face {
+    position: absolute;
+    top: 30rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100rpx;
+    height: 70rpx;
+}
+
+/* 眼睛 */
+.pet-eye {
+    position: absolute;
+    top: 10rpx;
+    width: 18rpx;
+    height: 22rpx;
+    background: #333;
+    border-radius: 50%;
+    animation: pet-blink 3s ease-in-out infinite;
+}
+
+.pet-eye--left {
+    left: 20rpx;
+}
+
+.pet-eye--right {
+    right: 20rpx;
+}
+
+.pet-eye::after {
+    content: '';
+    position: absolute;
+    top: 4rpx;
+    right: 4rpx;
+    width: 6rpx;
+    height: 6rpx;
+    background: #fff;
+    border-radius: 50%;
+}
+
+@keyframes pet-blink {
+    0%,
+    45%,
+    55%,
+    100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.1);
+    }
+}
+
+/* 鼻子 */
+.pet-nose {
+    position: absolute;
+    top: 32rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16rpx;
+    height: 12rpx;
+    background: #333;
+    border-radius: 8rpx 8rpx 12rpx 12rpx;
+}
+
+/* 嘴巴 */
+.pet-mouth {
+    position: absolute;
+    top: 46rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30rpx;
+    height: 14rpx;
+    border-bottom: 4rpx solid #333;
+    border-radius: 0 0 15rpx 15rpx;
+}
+
+/* 爪子 */
+.pet-paw {
+    position: absolute;
+    bottom: 0;
+    width: 50rpx;
+    height: 40rpx;
+    background: linear-gradient(135deg, #89e04e 0%, #56ab2f 100%);
+    border-radius: 25rpx 25rpx 15rpx 15rpx;
+    box-shadow: 0 4rpx 12rpx rgba(86, 171, 47, 0.2);
+}
+
+.pet-paw--left {
+    left: 30rpx;
+}
+
+.pet-paw--right {
+    right: 30rpx;
+}
+
+.paw-pad {
+    position: absolute;
+    top: 10rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rpx;
+    height: 16rpx;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+/* 标题 */
+.lang-title {
+    font-size: 40rpx;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12rpx;
+}
+
+.lang-subtitle {
+    font-size: 24rpx;
+    color: #999;
+}
+
+/* ---- 语言选项区 ---- */
+.lang-options {
+    display: flex;
+    flex-direction: column;
+    gap: 24rpx;
+}
+
+/* 语言卡片 */
+.lang-card {
+    display: flex;
+    align-items: center;
+    padding: 32rpx 28rpx;
+    background: #fff;
+    border-radius: 24rpx;
+    box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+    transition: all 300ms ease;
+    border: 4rpx solid transparent;
+}
+
+.lang-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+}
+
+.lang-card--selected {
+    border-color: #89e04e;
+    background: linear-gradient(135deg, #f8fff5 0%, #fff 100%);
+    box-shadow: 0 6rpx 20rpx rgba(137, 224, 78, 0.2);
+}
+
+/* 国旗 */
+.lang-flag {
+    width: 72rpx;
+    height: 72rpx;
+    font-size: 48rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24rpx;
+    background: #f5f5f5;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* 语言信息 */
+.lang-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6rpx;
+}
+
+.lang-name {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #333;
+}
+
+.lang-subname {
+    font-size: 22rpx;
+    color: #999;
+}
+
+/* 选中标记 */
+.lang-check {
+    width: 48rpx;
+    height: 48rpx;
+    background: linear-gradient(135deg, #a8e063 0%, #89e04e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    animation: check-pop 300ms ease;
+}
+
+@keyframes check-pop {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.check-icon {
+    width: 20rpx;
+    height: 12rpx;
+    border-bottom: 4rpx solid #fff;
+    border-left: 4rpx solid #fff;
+    transform: rotate(-45deg);
+    margin-top: -4rpx;
+}
+
+/* ---- 底部提示区 ---- */
+.lang-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60rpx;
+    padding: 20rpx 0;
+}
+
+/* 小爪印装饰 */
+.pet-paw-small {
+    width: 36rpx;
+    height: 32rpx;
+    background: linear-gradient(135deg, #89e04e 0%, #56ab2f 100%);
+    border-radius: 18rpx 18rpx 10rpx 10rpx;
+    margin-bottom: 16rpx;
+    opacity: 0.6;
+    animation: paw-wiggle 2s ease-in-out infinite;
+}
+
+@keyframes paw-wiggle {
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.pet-paw-small::before {
+    content: '';
+    position: absolute;
+    top: -8rpx;
+    left: 6rpx;
+    width: 8rpx;
+    height: 10rpx;
+    background: linear-gradient(135deg, #89e04e 0%, #56ab2f 100%);
+    border-radius: 50%;
+    box-shadow: 8rpx -2rpx 0 0 #89e04e, 16rpx 0 0 0 #89e04e;
+}
+
+.lang-tip {
+    font-size: 24rpx;
+    color: #666;
+    margin-bottom: 8rpx;
+}
+
+.lang-tip-sub {
+    font-size: 20rpx;
+    color: #bbb;
+}

@@ -1,0 +1,917 @@
+/* 发现页样式 - 宠物社区 */
+.discover-page {
+    height: 100%;
+    background-color: var(--discover-bg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ===== 顶部搜索栏 ===== */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 30rpx;
+    background: #fff;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 36rpx;
+    padding: 16rpx 24rpx;
+    margin-right: 20rpx;
+}
+
+.search-icon {
+    font-size: 28rpx;
+    margin-right: 12rpx;
+}
+
+.search-placeholder {
+    font-size: 26rpx;
+    color: #999;
+}
+
+.message-btn {
+    position: relative;
+    width: 72rpx;
+    height: 72rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 50%;
+}
+
+.message-icon {
+    font-size: 36rpx;
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 32rpx;
+    height: 32rpx;
+    background: #ff4757;
+    color: #fff;
+    font-size: 20rpx;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8rpx;
+}
+
+/* ===== Tab栏 ===== */
+.tab-bar-container {
+    background: #fff;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+}
+
+.tab-scroll {
+    white-space: nowrap;
+}
+
+.tab-list {
+    display: flex;
+    padding: 0 20rpx;
+}
+
+.tab-item {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24rpx 30rpx;
+    cursor: pointer;
+}
+
+.tab-text {
+    font-size: 28rpx;
+    color: #666;
+    font-weight: 500;
+}
+
+.tab-item.active .tab-text {
+    color: var(--discover-primary-start);
+    font-weight: 600;
+}
+
+.tab-indicator {
+    position: absolute;
+    bottom: 8rpx;
+    width: 40rpx;
+    height: 4rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    border-radius: 2rpx;
+}
+
+/* ===== Swiper内容区 ===== */
+.content-swiper {
+    flex: 1;
+    min-height: 0;
+}
+
+.swiper-item {
+    height: 100%;
+}
+
+.tab-content-scroll {
+    height: 100%;
+    padding-bottom: 120rpx;
+}
+
+/* ===== Tab 1: 附近宠友 ===== */
+.nearby-tab {
+    padding: 20rpx 30rpx;
+}
+
+.location-bar {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    padding: 24rpx;
+    margin-bottom: 20rpx;
+    box-shadow: var(--shadow-card);
+}
+
+.location-icon {
+    font-size: 32rpx;
+    margin-right: 12rpx;
+}
+
+.location-text {
+    flex: 1;
+    font-size: 28rpx;
+    color: var(--text-primary);
+}
+
+.location-change {
+    font-size: 26rpx;
+    color: var(--discover-primary-start);
+}
+
+.filter-section {
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    padding: 20rpx 24rpx;
+    margin-bottom: 20rpx;
+    box-shadow: var(--shadow-card);
+}
+
+.filter-title {
+    font-size: 28rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16rpx;
+    display: flex;
+    align-items: center;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 16rpx;
+}
+
+.filter-hint {
+    margin-top: 16rpx;
+    font-size: 24rpx;
+    color: var(--discover-primary-start);
+    background: rgba(86, 171, 47, 0.08);
+    padding: 12rpx 16rpx;
+    border-radius: 12rpx;
+}
+
+.filter-item {
+    flex: 1;
+    text-align: center;
+    font-size: 26rpx;
+    color: #666;
+    padding: 16rpx 0;
+    border-radius: 28rpx;
+    background: #f5f5f5;
+    transition: all 0.2s;
+}
+
+.filter-item.active {
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    font-weight: 500;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+}
+
+/* 空状态 */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100rpx 40rpx;
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    box-shadow: var(--shadow-card);
+    margin-bottom: 20rpx;
+}
+
+.empty-icon {
+    font-size: 80rpx;
+    margin-bottom: 24rpx;
+}
+
+.empty-text {
+    font-size: 32rpx;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 12rpx;
+}
+
+.empty-hint {
+    font-size: 26rpx;
+    color: var(--text-secondary);
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    padding: 24rpx;
+    box-shadow: var(--shadow-card);
+}
+
+.user-avatar {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    margin-right: 24rpx;
+    border: 2rpx solid #f0f0f0;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8rpx;
+}
+
+.user-name {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-right: 12rpx;
+}
+
+.user-online {
+    font-size: 20rpx;
+    color: #2ecc71;
+}
+
+.user-breed {
+    font-size: 26rpx;
+    color: var(--text-secondary);
+    margin-bottom: 8rpx;
+}
+
+.user-distance {
+    display: flex;
+    align-items: center;
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+.distance-icon {
+    margin-right: 4rpx;
+}
+
+.user-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12rpx;
+}
+
+.action-btn {
+    min-width: 120rpx;
+    padding: 12rpx 20rpx;
+    font-size: 24rpx;
+    border-radius: 28rpx;
+    border: none;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.action-btn.greet {
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+}
+
+.action-btn.profile {
+    background: #f5f5f5;
+    color: #666;
+}
+
+/* ===== Tab 2: 动态广场 ===== */
+.feed-tab {
+    padding: 20rpx 20rpx;
+}
+
+.waterfall {
+    display: flex;
+    gap: 20rpx;
+}
+
+.waterfall-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+}
+
+.feed-card {
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    break-inside: avoid;
+}
+
+.feed-image {
+    width: 100%;
+    display: block;
+}
+
+.feed-content {
+    padding: 20rpx;
+}
+
+.feed-title {
+    font-size: 28rpx;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: 16rpx;
+}
+
+.feed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12rpx;
+}
+
+.author-avatar {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    margin-right: 12rpx;
+}
+
+.author-name {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+.feed-stats {
+    display: flex;
+    gap: 24rpx;
+}
+
+.stat-item {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+/* ===== Tab 3: 话题讨论 ===== */
+.topic-tab {
+    padding: 20rpx 30rpx;
+}
+
+.topic-search {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 36rpx;
+    padding: 20rpx 24rpx;
+    margin-bottom: 20rpx;
+    box-shadow: var(--shadow-card);
+}
+
+.topic-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16rpx;
+    margin-bottom: 20rpx;
+}
+
+.category-item {
+    padding: 12rpx 24rpx;
+    background: #fff;
+    border-radius: 28rpx;
+    font-size: 26rpx;
+    color: #666;
+    box-shadow: var(--shadow-card);
+    transition: all 0.2s;
+}
+
+.category-item.active {
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    font-weight: 500;
+}
+
+.topic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+}
+
+.topic-item {
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    padding: 24rpx;
+    box-shadow: var(--shadow-card);
+}
+
+.topic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16rpx;
+}
+
+.topic-tag {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: var(--discover-primary-start);
+}
+
+.topic-heat {
+    font-size: 24rpx;
+    color: var(--discover-accent);
+    font-weight: 500;
+}
+
+.topic-desc {
+    font-size: 28rpx;
+    color: var(--text-tertiary);
+    line-height: 1.5;
+    margin-bottom: 16rpx;
+}
+
+.topic-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+.topic-new {
+    color: var(--discover-accent);
+    font-weight: 500;
+}
+
+/* ===== Tab 4: 宠物问答 ===== */
+.qa-tab {
+    padding: 20rpx 30rpx;
+}
+
+.qa-header {
+    display: flex;
+    align-items: center;
+    gap: 16rpx;
+    margin-bottom: 20rpx;
+}
+
+.qa-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 36rpx;
+    padding: 20rpx 24rpx;
+    box-shadow: var(--shadow-card);
+}
+
+.qa-ask-btn {
+    padding: 20rpx 28rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    font-size: 26rpx;
+    border-radius: 36rpx;
+    border: none;
+    font-weight: 500;
+}
+
+.qa-categories {
+    display: flex;
+    gap: 16rpx;
+    margin-bottom: 20rpx;
+    overflow-x: auto;
+}
+
+.qa-categories .category-item {
+    flex-shrink: 0;
+}
+
+.qa-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+}
+
+.qa-item {
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    padding: 24rpx;
+    box-shadow: var(--shadow-card);
+}
+
+.qa-question {
+    display: flex;
+    margin-bottom: 16rpx;
+}
+
+.qa-label {
+    font-size: 28rpx;
+    font-weight: 600;
+    color: var(--discover-primary-start);
+    margin-right: 12rpx;
+}
+
+.qa-title {
+    flex: 1;
+    font-size: 30rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.qa-expert {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12rpx;
+}
+
+.expert-avatar {
+    width: 48rpx;
+    height: 48rpx;
+    border-radius: 50%;
+    margin-right: 12rpx;
+}
+
+.expert-badge {
+    font-size: 20rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    padding: 4rpx 12rpx;
+    border-radius: 12rpx;
+    margin-right: 12rpx;
+}
+
+.expert-name {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+.qa-answer {
+    font-size: 28rpx;
+    color: var(--text-tertiary);
+    line-height: 1.6;
+    background: #f9f9f9;
+    padding: 16rpx;
+    border-radius: 12rpx;
+    margin-bottom: 16rpx;
+}
+
+.qa-meta {
+    display: flex;
+    align-items: center;
+    gap: 24rpx;
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+.follow-btn {
+    margin-left: auto;
+    padding: 8rpx 16rpx;
+    background: var(--primary-pastel);
+    color: var(--primary-dark);
+    border-radius: 20rpx;
+    font-size: 24rpx;
+}
+
+.follow-btn.following {
+    background: #f0f0f0;
+    color: #999;
+}
+
+/* ===== Tab 5: 线下活动 ===== */
+.activity-tab {
+    padding: 20rpx 30rpx;
+}
+
+.activity-header {
+    display: flex;
+    align-items: center;
+    gap: 16rpx;
+    margin-bottom: 20rpx;
+}
+
+.activity-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 36rpx;
+    padding: 20rpx 24rpx;
+    box-shadow: var(--shadow-card);
+}
+
+.activity-publish-btn {
+    padding: 20rpx 28rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    font-size: 26rpx;
+    border-radius: 36rpx;
+    border: none;
+    font-weight: 500;
+}
+
+.activity-types {
+    display: flex;
+    gap: 16rpx;
+    margin-bottom: 20rpx;
+    overflow-x: auto;
+}
+
+.activity-types .category-item {
+    flex-shrink: 0;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+}
+
+.activity-card {
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.activity-cover {
+    width: 100%;
+    height: 300rpx;
+}
+
+.activity-info {
+    padding: 24rpx;
+}
+
+.activity-title {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16rpx;
+}
+
+.activity-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8rpx;
+    margin-bottom: 20rpx;
+}
+
+.meta-item {
+    font-size: 26rpx;
+    color: var(--text-secondary);
+}
+
+.activity-join-btn {
+    width: 100%;
+    padding: 20rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    font-size: 28rpx;
+    border-radius: 36rpx;
+    border: none;
+    font-weight: 500;
+}
+
+.activity-join-btn.registered {
+    background: #f0f0f0;
+    color: #999;
+}
+
+/* ===== Tab 6: 好物推荐 ===== */
+.product-tab {
+    /* 底部额外预留空间，让最后一行商品能滚动至购物车悬浮栏（~130rpx）上方 */
+    padding: 20rpx 30rpx 160rpx;
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    gap: 16rpx;
+    margin-bottom: 20rpx;
+}
+
+.product-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 36rpx;
+    padding: 20rpx 24rpx;
+    box-shadow: var(--shadow-card);
+}
+
+.cart-btn {
+    position: relative;
+    width: 72rpx;
+    height: 72rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: var(--shadow-card);
+}
+
+.cart-icon {
+    font-size: 36rpx;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8rpx;
+    right: -8rpx;
+    min-width: 36rpx;
+    height: 36rpx;
+    background: #ff4757;
+    color: #fff;
+    font-size: 22rpx;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8rpx;
+}
+
+.product-categories {
+    display: flex;
+    gap: 16rpx;
+    margin-bottom: 20rpx;
+    overflow-x: auto;
+}
+
+.product-categories .category-item {
+    flex-shrink: 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20rpx;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.product-image {
+    width: 100%;
+    height: 320rpx;
+}
+
+.product-info {
+    padding: 20rpx;
+}
+
+.product-name {
+    font-size: 28rpx;
+    color: var(--text-primary);
+    margin-bottom: 12rpx;
+}
+
+.product-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16rpx;
+}
+
+.product-price {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: var(--discover-accent);
+}
+
+.product-likes {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+.add-cart-btn {
+    width: 100%;
+    padding: 16rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    font-size: 26rpx;
+    border-radius: 28rpx;
+    border: none;
+}
+
+/* ===== 底部悬浮按钮 ===== */
+.fab-publish {
+    position: fixed;
+    right: 30rpx;
+    bottom: 140rpx;
+    width: 120rpx;
+    height: 120rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8rpx 24rpx rgba(86, 171, 47, 0.4);
+    z-index: 100;
+}
+
+.fab-icon {
+    font-size: 40rpx;
+    margin-bottom: 4rpx;
+}
+
+.fab-text {
+    font-size: 22rpx;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* ===== 购物车悬浮栏 ===== */
+.cart-float-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 30rpx;
+    background: #fff;
+    box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+
+.cart-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-total {
+    font-size: 36rpx;
+    font-weight: 700;
+    color: var(--discover-accent);
+}
+
+.cart-count {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+.checkout-btn {
+    padding: 24rpx 48rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    font-size: 28rpx;
+    border-radius: 36rpx;
+    border: none;
+    font-weight: 600;
+}
+
+/* ===== 通用 ===== */
+.load-more {
+    text-align: center;
+    padding: 40rpx;
+    color: var(--text-secondary);
+    font-size: 26rpx;
+}

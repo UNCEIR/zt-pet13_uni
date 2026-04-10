@@ -1,0 +1,350 @@
+/* 订单详情页样式 */
+.order-detail-page {
+    min-height: 100vh;
+    background-color: var(--discover-bg);
+    padding: 20rpx 30rpx;
+    padding-bottom: 140rpx;
+}
+
+/* ===== 订单状态 ===== */
+.status-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60rpx 30rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    border-radius: 24rpx;
+    margin-bottom: 20rpx;
+}
+
+.status-icon {
+    font-size: 80rpx;
+    margin-bottom: 20rpx;
+}
+
+.status-text {
+    font-size: 40rpx;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12rpx;
+}
+
+.status-desc {
+    font-size: 26rpx;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== 物流信息 ===== */
+.logistics-section {
+    margin-bottom: 20rpx;
+    padding: 24rpx;
+}
+
+.logistics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.logistics-title {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.logistics-arrow {
+    font-size: 28rpx;
+    color: var(--text-secondary);
+}
+
+.logistics-content {
+    display: flex;
+    align-items: center;
+    background: var(--primary-pastel);
+    border-radius: 16rpx;
+    padding: 20rpx;
+}
+
+.logistics-icon {
+    font-size: 48rpx;
+    margin-right: 20rpx;
+}
+
+.logistics-info {
+    flex: 1;
+}
+
+.logistics-status {
+    font-size: 28rpx;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 8rpx;
+}
+
+.logistics-time {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+/* ===== 收货地址 ===== */
+.address-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20rpx;
+    padding: 24rpx;
+}
+
+.address-icon {
+    font-size: 40rpx;
+    margin-right: 20rpx;
+}
+
+.address-content {
+    flex: 1;
+}
+
+.address-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12rpx;
+}
+
+.address-name {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-right: 20rpx;
+}
+
+.address-phone {
+    font-size: 28rpx;
+    color: var(--text-secondary);
+}
+
+.address-detail {
+    font-size: 28rpx;
+    color: var(--text-tertiary);
+    line-height: 1.5;
+}
+
+/* ===== 订单商品 ===== */
+.order-items {
+    margin-bottom: 20rpx;
+    padding: 24rpx;
+}
+
+.section-title {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20rpx;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24rpx;
+}
+
+.order-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.item-image {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 12rpx;
+    margin-right: 20rpx;
+    background: #f5f5f5;
+}
+
+.item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-size: 28rpx;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 8rpx;
+}
+
+.item-spec {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+    margin-bottom: 16rpx;
+}
+
+.item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-price {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: var(--discover-accent);
+}
+
+.item-quantity {
+    font-size: 26rpx;
+    color: var(--text-secondary);
+}
+
+.items-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24rpx;
+    padding-top: 24rpx;
+    border-top: 1rpx solid rgba(0, 0, 0, 0.05);
+    font-size: 28rpx;
+    color: var(--text-secondary);
+}
+
+.subtotal {
+    font-size: 30rpx;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* ===== 订单信息 ===== */
+.order-info {
+    margin-bottom: 20rpx;
+    padding: 24rpx;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16rpx;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.info-label {
+    font-size: 28rpx;
+    color: var(--text-secondary);
+    width: 140rpx;
+    flex-shrink: 0;
+}
+
+.info-value-row {
+    display: flex;
+    align-items: center;
+}
+
+.info-value {
+    flex: 1;
+    font-size: 28rpx;
+    color: var(--text-tertiary);
+    text-align: right;
+}
+
+.copy-btn {
+    font-size: 24rpx;
+    color: var(--discover-primary-start);
+    margin-left: 16rpx;
+    padding: 4rpx 16rpx;
+    background: var(--primary-pastel);
+    border-radius: 20rpx;
+}
+
+/* ===== 价格明细 ===== */
+.price-section {
+    margin-bottom: 20rpx;
+    padding: 24rpx;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16rpx;
+}
+
+.price-row.total {
+    margin-top: 24rpx;
+    padding-top: 24rpx;
+    border-top: 1rpx solid rgba(0, 0, 0, 0.05);
+}
+
+.price-label {
+    font-size: 28rpx;
+    color: var(--text-secondary);
+}
+
+.price-value {
+    font-size: 28rpx;
+    color: var(--text-primary);
+}
+
+.price-value.free {
+    color: #2ecc71;
+}
+
+.price-value.discount {
+    color: #ff4757;
+}
+
+.final-price {
+    display: flex;
+    align-items: baseline;
+}
+
+.price-symbol {
+    font-size: 28rpx;
+    color: var(--discover-accent);
+    font-weight: 600;
+}
+
+.price-number {
+    font-size: 40rpx;
+    color: var(--discover-accent);
+    font-weight: 700;
+}
+
+/* ===== 操作按钮 ===== */
+.action-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20rpx;
+    padding: 20rpx 30rpx;
+    padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+    background: #fff;
+    box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+.action-btn {
+    padding: 20rpx 40rpx;
+    font-size: 28rpx;
+    border-radius: 36rpx;
+    border: 1rpx solid #ddd;
+    color: var(--text-tertiary);
+}
+
+.action-btn.primary {
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    border: none;
+    box-shadow: 0 4rpx 16rpx rgba(86, 171, 47, 0.3);
+}
+
+.action-btn.secondary {
+    background: #fff;
+    color: var(--text-tertiary);
+    border: 1rpx solid #ddd;
+}

@@ -1,0 +1,775 @@
+/* 宠物首页 */
+.page {
+    min-height: 100vh;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 沉浸式主视觉区（文档：背景全屏铺满，画面中心柯基） */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 680rpx;
+    overflow: hidden;
+}
+
+/* 背景：户外自然场景+柯基，全屏铺满 */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 顶部头部：悬浮于背景之上，左内边距与全局一致 */
+.hero-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+    padding-bottom: 20rpx;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20rpx;
+}
+
+.avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* 头像：柯基狗头，圆形 */
+.avatar {
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 50%;
+    background: #f0f0f0;
+    display: block;
+}
+
+.status-dot {
+    position: absolute;
+    right: 4rpx;
+    bottom: 4rpx;
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    border: 4rpx solid rgba(255, 255, 255, 0.9);
+}
+
+.status-dot.online {
+    background: #89e04e;
+}
+
+.pet-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4rpx;
+}
+
+.pet-name {
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #000;
+}
+
+.pet-status {
+    font-size: 24rpx;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 24rpx;
+}
+
+.icon-status {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.msg-wrap {
+    position: relative;
+}
+
+.msg-badge {
+    position: absolute;
+    top: -4rpx;
+    right: -4rpx;
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    background: #ff3b30;
+}
+
+/* 按钮详情：横向等距，图标+文案垂直居中 */
+.quick-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    border-radius: 16rpx;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 40rpx 24rpx;
+    margin: 24rpx;
+}
+
+.quick-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12rpx;
+}
+
+.quick-btn.disabled {
+    opacity: 0.6;
+}
+
+.quick-icon {
+    width: 88rpx;
+    height: 88rpx;
+}
+
+.quick-text {
+    font-size: 26rpx;
+    color: #333;
+}
+
+/* 功能卡片区 */
+.card-section {
+    padding: 0 24rpx 140rpx;
+    position: relative;
+}
+
+.core-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24rpx;
+    margin-bottom: 24rpx;
+}
+
+.core-row:last-child {
+    margin-bottom: 0;
+}
+
+.core-card {
+    flex: 1;
+    min-width: 0;
+    background: #fff;
+    border-radius: 16rpx;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 24rpx;
+}
+
+.core-header {
+    display: flex;
+    align-items: center;
+    gap: 12rpx;
+    margin-bottom: 20rpx;
+}
+
+.core-icon {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.core-title {
+    flex: 1;
+    font-size: 30rpx;
+    font-weight: 500;
+    color: #000;
+}
+
+.arrow {
+    width: 24rpx;
+    height: 24rpx;
+    border-top: 4rpx solid #999;
+    border-right: 4rpx solid #999;
+    transform: rotate(45deg);
+}
+
+.core-subs {
+    display: flex;
+    gap: 16rpx;
+    justify-content: space-around;
+}
+
+.core-subs .sub-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rpx;
+    font-size: 24rpx;
+    color: #333;
+}
+
+.core-subs .sub-icon {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+/* 健康数据 */
+.core-data {
+    display: flex;
+    gap: 16rpx;
+}
+
+.core-data .data-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rpx;
+    padding: 20rpx;
+    background: #f8f8f8;
+    border-radius: 12rpx;
+}
+
+.core-data .data-icon {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.core-data .data-value {
+    font-size: 26rpx;
+    font-weight: 500;
+    color: #333;
+}
+
+.core-data .data-label {
+    font-size: 22rpx;
+    color: #999;
+}
+
+/* 响铃弹框 - 深色风格 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-content.modal-dark {
+    background: #4a4a4a;
+    border-radius: 24rpx;
+    padding: 48rpx 64rpx;
+    min-width: 420rpx;
+}
+
+.modal-loading {
+    width: 64rpx;
+    height: 64rpx;
+    margin: 0 auto 24rpx;
+    border: 6rpx solid rgba(137, 224, 78, 0.3);
+    border-top-color: #89e04e;
+    border-radius: 50%;
+    animation: modal-spin 0.8s linear infinite;
+}
+
+@keyframes modal-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-content .modal-text {
+    font-size: 30rpx;
+    color: #fff;
+    display: block;
+}
+
+.modal-content.success .modal-text {
+    margin-bottom: 24rpx;
+}
+
+.modal-icon-success {
+    width: 96rpx;
+    height: 96rpx;
+    margin: 0 auto 24rpx;
+    border: 6rpx solid #fff;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-check {
+    width: 24rpx;
+    height: 44rpx;
+    border-right: 5rpx solid #fff;
+    border-bottom: 5rpx solid #fff;
+    transform: rotate(45deg);
+    margin-top: -8rpx;
+}
+
+.modal-content .modal-btn {
+    display: inline-block;
+    padding: 16rpx 48rpx;
+    font-size: 28rpx;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 40rpx;
+}
+
+/* ========== 底部弹窗（蓝牙） ========== */
+.bs-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bs-panel {
+    width: 100%;
+    background: #fff;
+    border-radius: 32rpx 32rpx 0 0;
+    padding: 40rpx 40rpx calc(40rpx + env(safe-area-inset-bottom));
+    animation: bs-slide-up 0.3s ease-out;
+}
+
+.bs-panel-list {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+@keyframes bs-slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.bs-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32rpx;
+}
+
+.bs-head-icon {
+    width: 44rpx;
+    height: 44rpx;
+    flex-shrink: 0;
+}
+
+.bs-head-title {
+    flex: 1;
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #333;
+}
+
+.bs-head-close {
+    width: 48rpx;
+    height: 48rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40rpx;
+    color: #999;
+    flex-shrink: 0;
+}
+
+.bs-body {
+    margin-bottom: 32rpx;
+}
+
+.bs-body-card {
+    background: #f4f8f0;
+    border-radius: 16rpx;
+    padding: 28rpx;
+    margin-bottom: 36rpx;
+}
+
+.bs-desc {
+    display: block;
+    font-size: 28rpx;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 20rpx;
+}
+
+.bs-hint {
+    display: block;
+    font-size: 24rpx;
+    color: #65b23a;
+    margin-bottom: 28rpx;
+}
+
+/* 模拟控制中心 */
+.cc-mock {
+    background: #1c1c1e;
+    border-radius: 20rpx;
+    padding: 16rpx;
+    display: inline-block;
+}
+
+.cc-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 152rpx;
+}
+
+.cc-dot {
+    width: 68rpx;
+    height: 68rpx;
+    border-radius: 50%;
+    margin: 4rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cc-off {
+    background: #636366;
+}
+.cc-on-green {
+    background: #30d158;
+}
+.cc-on-blue {
+    background: #007aff;
+}
+
+/* 飞行模式图标 */
+.cc-airplane {
+    position: relative;
+    width: 22rpx;
+    height: 22rpx;
+    transform: rotate(45deg);
+}
+
+.ap-body {
+    position: absolute;
+    width: 4rpx;
+    height: 22rpx;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3rpx;
+}
+
+.ap-wing {
+    position: absolute;
+    width: 22rpx;
+    height: 5rpx;
+    background: #fff;
+    top: 7rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rpx;
+}
+
+.ap-tail {
+    position: absolute;
+    width: 12rpx;
+    height: 4rpx;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rpx;
+}
+
+/* 蜂窝数据图标 */
+.cc-cellular {
+    display: flex;
+    align-items: flex-end;
+    gap: 3rpx;
+}
+
+.cell-bar {
+    width: 5rpx;
+    background: #fff;
+    border-radius: 1rpx;
+}
+
+/* WiFi 图标 */
+.cc-wifi {
+    position: relative;
+    width: 28rpx;
+    height: 22rpx;
+}
+
+.wifi-arc {
+    position: absolute;
+    border: 3rpx solid #fff;
+    border-bottom: none;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wifi-lg {
+    width: 28rpx;
+    height: 14rpx;
+    border-radius: 28rpx 28rpx 0 0;
+    top: 0;
+}
+
+.wifi-md {
+    width: 18rpx;
+    height: 9rpx;
+    border-radius: 18rpx 18rpx 0 0;
+    top: 5rpx;
+}
+
+.wifi-sm {
+    width: 10rpx;
+    height: 5rpx;
+    border-radius: 10rpx 10rpx 0 0;
+    top: 10rpx;
+}
+
+.wifi-center {
+    width: 5rpx;
+    height: 5rpx;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 蓝牙图标 */
+.cc-bt {
+    position: relative;
+    width: 14rpx;
+    height: 24rpx;
+}
+
+.bt-line {
+    position: absolute;
+    width: 3rpx;
+    height: 100%;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bt-arrow-t {
+    position: absolute;
+    width: 9rpx;
+    height: 9rpx;
+    border: 2rpx solid #fff;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+    top: 1rpx;
+    right: -1rpx;
+}
+
+.bt-arrow-b {
+    position: absolute;
+    width: 9rpx;
+    height: 9rpx;
+    border: 2rpx solid #fff;
+    border-left: none;
+    border-top: none;
+    transform: rotate(-45deg);
+    bottom: 1rpx;
+    right: -1rpx;
+}
+
+/* 底部操作按钮 */
+.bs-action {
+    width: 100%;
+    height: 96rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #89e04e;
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: bold;
+    border-radius: 48rpx;
+}
+
+.bs-action-disabled {
+    opacity: 0.5;
+}
+
+/* ========== 设备列表 ========== */
+.bs-label {
+    display: block;
+    font-size: 28rpx;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 12rpx;
+    margin-top: 28rpx;
+}
+
+.bs-label:first-child {
+    margin-top: 0;
+}
+
+.dev-card {
+    border-radius: 16rpx;
+    overflow: hidden;
+    margin-bottom: 4rpx;
+}
+
+.dev-card-gray {
+    background: #f2f2f7;
+}
+
+.dev-item {
+    display: flex;
+    align-items: center;
+    padding: 26rpx 20rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.06);
+}
+
+.dev-item:last-child {
+    border-bottom: none;
+}
+
+.dev-check {
+    width: 36rpx;
+    height: 36rpx;
+    border-radius: 50%;
+    background: #89e04e;
+    color: #fff;
+    font-size: 22rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16rpx;
+    flex-shrink: 0;
+}
+
+.dev-name {
+    flex: 1;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.dev-delete {
+    width: 44rpx;
+    height: 44rpx;
+    background: #ff3b30;
+    border-radius: 10rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.trash-body {
+    width: 18rpx;
+    height: 18rpx;
+    border: 2rpx solid #fff;
+    border-top: none;
+    border-radius: 0 0 3rpx 3rpx;
+    position: relative;
+}
+
+.trash-body::before {
+    content: '';
+    position: absolute;
+    top: -6rpx;
+    left: -4rpx;
+    width: 24rpx;
+    height: 0;
+    border-top: 3rpx solid #fff;
+}
+
+.trash-body::after {
+    content: '';
+    position: absolute;
+    top: -10rpx;
+    left: 3rpx;
+    width: 10rpx;
+    height: 4rpx;
+    border: 2rpx solid #fff;
+    border-bottom: none;
+    border-radius: 2rpx 2rpx 0 0;
+}
+
+/* CSS 蓝牙符号（列表用） */
+.dev-bt-sym {
+    position: relative;
+    width: 16rpx;
+    height: 24rpx;
+    flex-shrink: 0;
+    margin-left: 12rpx;
+}
+
+.bts-line {
+    position: absolute;
+    width: 2rpx;
+    height: 100%;
+    background: #999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bts-top {
+    position: absolute;
+    width: 8rpx;
+    height: 8rpx;
+    border: 2rpx solid #999;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+    top: 1rpx;
+    right: 0;
+}
+
+.bts-bot {
+    position: absolute;
+    width: 8rpx;
+    height: 8rpx;
+    border: 2rpx solid #999;
+    border-left: none;
+    border-top: none;
+    transform: rotate(-45deg);
+    bottom: 1rpx;
+    right: 0;
+}
+
+.dev-item.nearby {
+    transition: background 0.2s;
+}
+
+.dev-item.nearby.selected {
+    background: rgba(137, 224, 78, 0.12);
+}
+
+.dev-empty {
+    padding: 32rpx 0;
+    text-align: center;
+    color: #bbb;
+    font-size: 26rpx;
+}

@@ -1,0 +1,330 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "名宠",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/discover",
+			"style": {
+				"navigationBarTitleText": "发现",
+				"usingComponents": {},
+				"enablePullDownRefresh": false,
+				"backgroundColor": "#faf9f6"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/pet-idcard/pet-idcard",
+			"style": {
+				"navigationBarTitleText": "爱宠身份卡",
+				"navigationBarBackgroundColor": "#56ab2f",
+				"navigationBarTextStyle": "white",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/fence/fence",
+			"style": {
+				"navigationBarTitleText": "电子围栏",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/fence-in-out/fence-in-out",
+			"style": {
+				"navigationBarTitleText": "出入围栏",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/fence-hotspot/fence-hotspot",
+			"style": {
+				"navigationBarTitleText": "热点围栏",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/track/track",
+			"style": {
+				"navigationBarTitleText": "轨迹回放",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/track-today/track-today",
+			"style": {
+				"navigationBarTitleText": "今日轨迹",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/track-history/track-history",
+			"style": {
+				"navigationBarTitleText": "历史轨迹",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/health/health",
+			"style": {
+				"navigationBarTitleText": "健康数据",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/pet-list/pet-list",
+			"style": {
+				"navigationBarTitleText": "多宠管理",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/add-owner/add-owner",
+			"style": {
+				"navigationBarTitleText": "添加主人",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/add-member/add-member",
+			"style": {
+				"navigationBarTitleText": "添加成员",
+				"backgroundColor": "#F5F5F5",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/inviteMethod/index",
+			"style": {
+				"navigationBarTitleText": "选择邀请方式",
+				"backgroundColor": "#FFFFFF",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/add-pet/add-pet",
+			"style": {
+				"navigationBarTitleText": "添加萌宠",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/device-select/device-select",
+			"style": {
+				"navigationBarTitleText": "选择设备",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/contacts/contacts",
+			"style": {
+				"navigationBarTitleText": "通讯录",
+				"navigationBarBackgroundColor": "#f5f5f5",
+				"navigationBarTextStyle": "black",
+				"backgroundColor": "#f5f5f5",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/gender-select/gender-select",
+			"style": {
+				"navigationBarTitleText": "选择性别",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/breed-select/breed-select",
+			"style": {
+				"navigationBarTitleText": "选择品种",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "消息中心",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/family-number/family-number",
+			"style": {
+				"navigationBarTitleText": "亲情号",
+				"navigationBarBackgroundColor": "#f5f5f5",
+				"navigationBarTextStyle": "black",
+				"backgroundColor": "#f5f5f5",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/manual/manual",
+			"style": {
+				"navigationBarTitleText": "电子说明书",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"backgroundColor": "#f5f5f5",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/language/language",
+			"style": {
+				"navigationBarTitleText": "切换语言",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/version/version",
+			"style": {
+				"navigationBarTitleText": "软件版本",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/feed-detail/feed-detail",
+			"style": {
+				"navigationBarTitleText": "动态详情",
+				"navigationBarBackgroundColor": "#faf9f6",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/topic-detail/topic-detail",
+			"style": {
+				"navigationBarTitleText": "话题详情",
+				"navigationBarBackgroundColor": "#faf9f6",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/question-detail/question-detail",
+			"style": {
+				"navigationBarTitleText": "问题详情",
+				"navigationBarBackgroundColor": "#faf9f6",
+				"enablePullDownRefresh": true,
+				"backgroundColor": "#faf9f6",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/activity-detail/activity-detail",
+			"style": {
+				"navigationBarTitleText": "活动详情",
+				"navigationBarBackgroundColor": "#faf9f6",
+				"enablePullDownRefresh": true,
+				"backgroundColor": "#faf9f6",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/product-detail/product-detail",
+			"style": {
+				"navigationBarTitleText": "商品详情",
+				"navigationBarBackgroundColor": "#ffffff",
+				"enablePullDownRefresh": false,
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"navigationBarBackgroundColor": "#ffffff",
+				"enablePullDownRefresh": true,
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/order-confirm/order-confirm",
+			"style": {
+				"navigationBarTitleText": "确认订单",
+				"navigationBarBackgroundColor": "#ffffff",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/order-detail/order-detail",
+			"style": {
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/post-create/post-create",
+			"style": {
+				"navigationBarTitleText": "发布动态",
+				"navigationBarBackgroundColor": "#faf9f6",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/activity-create/activity-create",
+			"style": {
+				"navigationBarTitleText": "发布活动",
+				"navigationBarBackgroundColor": "#faf9f6",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/question-create/question-create",
+			"style": {
+				"navigationBarTitleText": "提问",
+				"navigationBarBackgroundColor": "#faf9f6",
+				"usingComponents": {}
+			}
+		},
+		{
+			"path": "pages/discover/user-profile/user-profile",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false,
+				"usingComponents": {},
+				"backgroundColor": "#faf9f6"
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#89E04E",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/discover/discover",
+				"text": "发现",
+				"iconPath": "static/images/tab/discover.png",
+				"selectedIconPath": "static/images/tab/discover-active.png"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"text": "名宠",
+				"iconPath": "static/images/tab/pet.png",
+				"selectedIconPath": "static/images/tab/pet-active.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "static/images/tab/mine.png",
+				"selectedIconPath": "static/images/tab/mine-active.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json",
+	"globalStyle": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTitleText": "",
+		"navigationBarTextStyle": "black"
+	},
+	"subPackages": []
+}

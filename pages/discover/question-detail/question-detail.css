@@ -1,0 +1,364 @@
+/* 问答详情页样式 */
+.question-detail-page {
+    min-height: 100vh;
+    background-color: var(--discover-bg);
+    padding: 20rpx 30rpx 140rpx;
+}
+
+/* ===== 问题头部 ===== */
+.question-header {
+    margin-bottom: 20rpx;
+}
+
+.question-category-tag {
+    display: inline-flex;
+    padding: 8rpx 20rpx;
+    background: var(--primary-pastel);
+    color: var(--primary-dark);
+    font-size: 24rpx;
+    border-radius: 20rpx;
+    margin-bottom: 16rpx;
+}
+
+.question-title {
+    font-size: 36rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: 16rpx;
+}
+
+.question-content {
+    font-size: 28rpx;
+    color: var(--text-tertiary);
+    line-height: 1.7;
+    margin-bottom: 24rpx;
+    white-space: pre-wrap;
+}
+
+/* 提问者信息 */
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24rpx;
+    padding-bottom: 24rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+}
+
+.author-avatar {
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 50%;
+    margin-right: 16rpx;
+}
+
+.author-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-size: 28rpx;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 4rpx;
+}
+
+.question-time {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+/* 问题统计 */
+.question-stats {
+    display: flex;
+    gap: 32rpx;
+    margin-bottom: 20rpx;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    font-size: 26rpx;
+    color: var(--text-secondary);
+}
+
+.stat-icon {
+    margin-right: 8rpx;
+}
+
+.stat-value {
+    font-weight: 500;
+}
+
+/* 关注问题按钮 */
+.follow-question-btn {
+    width: 100%;
+    padding: 20rpx;
+    background: var(--primary-pastel);
+    color: var(--primary-dark);
+    font-size: 28rpx;
+    border-radius: 36rpx;
+    border: none;
+    font-weight: 500;
+}
+
+.follow-question-btn.following {
+    background: #f0f0f0;
+    color: #999;
+}
+
+/* ===== 回答列表区域 ===== */
+.answers-section {
+    margin-bottom: 20rpx;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 0;
+}
+
+.section-title {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.sort-options {
+    display: flex;
+    gap: 24rpx;
+}
+
+.sort-item {
+    font-size: 26rpx;
+    color: var(--text-secondary);
+    padding: 8rpx 16rpx;
+}
+
+.sort-item.active {
+    color: var(--discover-primary-start);
+    font-weight: 500;
+}
+
+/* 回答卡片 */
+.answer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+}
+
+.answer-card {
+    padding: 24rpx;
+}
+
+.answer-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20rpx;
+}
+
+.answerer-avatar {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+    margin-right: 16rpx;
+    border: 2rpx solid #f0f0f0;
+}
+
+.answerer-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.answerer-name-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rpx;
+}
+
+.answerer-name {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-right: 12rpx;
+}
+
+.expert-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4rpx 12rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    border-radius: 12rpx;
+}
+
+.badge-icon {
+    font-size: 20rpx;
+    color: #fff;
+    margin-right: 4rpx;
+}
+
+.badge-text {
+    font-size: 20rpx;
+    color: #fff;
+}
+
+.answer-time {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+}
+
+.accepted-mark {
+    padding: 8rpx 16rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    font-size: 24rpx;
+    border-radius: 20rpx;
+    margin-left: 16rpx;
+}
+
+/* 回答内容 */
+.answer-content {
+    font-size: 28rpx;
+    color: var(--text-tertiary);
+    line-height: 1.7;
+    margin-bottom: 20rpx;
+    white-space: pre-wrap;
+}
+
+/* 回答图片 */
+.answer-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rpx;
+    margin-bottom: 20rpx;
+}
+
+.answer-image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 12rpx;
+}
+
+/* 回答操作栏 */
+.answer-actions {
+    display: flex;
+    gap: 40rpx;
+    padding-top: 20rpx;
+    border-top: 1rpx solid rgba(0, 0, 0, 0.05);
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8rpx;
+    padding: 8rpx 0;
+}
+
+.action-btn .action-icon {
+    font-size: 32rpx;
+    color: var(--text-secondary);
+}
+
+.action-btn .action-count {
+    font-size: 26rpx;
+    color: var(--text-secondary);
+}
+
+.action-btn.active .action-icon,
+.action-btn.active .action-count {
+    color: #ff4757;
+}
+
+/* ===== 推荐相关问题 ===== */
+.related-section {
+    margin-bottom: 20rpx;
+}
+
+.related-list {
+    background: #fff;
+    border-radius: var(--discover-card-radius);
+    box-shadow: var(--shadow-card);
+}
+
+.related-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+}
+
+.related-item:last-child {
+    border-bottom: none;
+}
+
+.related-title {
+    flex: 1;
+    font-size: 28rpx;
+    color: var(--text-primary);
+    margin-right: 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.related-count {
+    font-size: 24rpx;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+/* ===== 加载更多 ===== */
+.load-more {
+    text-align: center;
+    padding: 40rpx;
+    color: var(--text-secondary);
+    font-size: 26rpx;
+}
+
+/* ===== 底部操作栏 ===== */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20rpx 30rpx;
+    padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+    background: #fff;
+    box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+.invite-btn {
+    display: flex;
+    align-items: center;
+    padding: 16rpx 24rpx;
+    background: #f5f5f5;
+    border-radius: 36rpx;
+}
+
+.invite-icon {
+    font-size: 28rpx;
+    color: var(--text-secondary);
+    margin-right: 8rpx;
+}
+
+.invite-text {
+    font-size: 26rpx;
+    color: var(--text-secondary);
+}
+
+.answer-btn {
+    padding: 24rpx 64rpx;
+    background: linear-gradient(135deg, var(--discover-primary-start), var(--discover-primary-end));
+    color: #fff;
+    font-size: 30rpx;
+    border-radius: 48rpx;
+    border: none;
+    font-weight: 600;
+}

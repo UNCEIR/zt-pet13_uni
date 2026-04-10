@@ -1,0 +1,95 @@
+.page {
+    min-height: 100vh;
+    background: #f5f5f5;
+    padding: 0 0 32rpx;
+}
+
+.tip-wrap {
+    margin: 24rpx 0 20rpx;
+    padding: 0 32rpx;
+}
+
+.tip-text {
+    display: block;
+    font-size: 24rpx;
+    color: #999;
+    line-height: 1.6;
+}
+
+.member-card {
+    margin: 0 32rpx;
+    background: #fff;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+.member-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28rpx 24rpx;
+}
+
+.avatar-placeholder,
+.invite-icon {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.avatar-placeholder {
+    background: #e3e3e3;
+}
+
+.invite-icon {
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.invite-plus {
+    font-size: 44rpx;
+    line-height: 1;
+    color: #333;
+    margin-top: -2rpx;
+}
+
+.member-info {
+    flex: 1;
+    margin: 0 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.member-name {
+    font-size: 32rpx;
+    font-weight: 700;
+    color: #333;
+}
+
+.member-role {
+    margin-top: 6rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.single-line {
+    justify-content: center;
+}
+
+.divider {
+    height: 1rpx;
+    margin: 0 24rpx;
+    background: #eeeeee;
+}
+
+.arrow {
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #999;
+    border-right: 4rpx solid #999;
+    transform: rotate(45deg);
+}
